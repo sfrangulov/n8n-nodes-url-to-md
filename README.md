@@ -1,8 +1,12 @@
 # n8n-nodes-url-to-md
 
+[![npm version](https://img.shields.io/npm/v/n8n-nodes-url-to-md.svg)](https://www.npmjs.com/package/n8n-nodes-url-to-md)
+[![npm downloads](https://img.shields.io/npm/dm/n8n-nodes-url-to-md.svg)](https://www.npmjs.com/package/n8n-nodes-url-to-md)
+[![License: MIT](https://img.shields.io/npm/l/n8n-nodes-url-to-md.svg)](LICENSE.md)
+
 An [n8n](https://n8n.io) community node that fetches a URL and converts the page into clean Markdown — ready for LLMs, RAG pipelines, and AI agents.
 
-It extracts the main article with Mozilla [Readability](https://github.com/mozilla/readability) (stripping nav, ads, and footers), converts it to GitHub-flavored Markdown with [Turndown](https://github.com/mixmark-io/turndown), and tidies the result with [markdownlint](https://github.com/DavidAnson/markdownlint). No API key, no external service — runs locally inside n8n.
+It extracts the main article with [Defuddle](https://github.com/kepano/defuddle) (stripping nav, ads, and footers), parsed via [linkedom](https://github.com/WebReflection/linkedom), then renders GitHub-flavored Markdown with [Turndown](https://github.com/mixmark-io/turndown). No API key, no external service — runs locally inside n8n.
 
 [Installation](#installation) · [Operations](#operations) · [Options](#options) · [Compatibility](#compatibility)
 
@@ -25,11 +29,7 @@ It is also exposed as an **AI Agent tool** (`usableAsTool`), so agents can fetch
 | Option | Default | Description |
 | --- | --- | --- |
 | Destination Output Field | `markdown` | JSON field that receives the Markdown |
-| Clean With Readability | `true` | Extract the main article before converting; disable to convert the whole page |
-| Lint Markdown | `true` | Run markdownlint auto-fix on the output |
-| Heading Style | `atx` | `# Heading` (ATX) or Setext underlines |
-| Bullet List Marker | `-` | `-`, `*`, or `+` for unordered lists |
-| Code Block Style | `fenced` | Fenced ` ``` ` or 4-space indented |
+| Remove Images | `false` | Strip images from the converted Markdown |
 | Request Timeout | `30000` ms | How long to wait for the page to respond |
 | User Agent | _(none)_ | Custom `User-Agent` header for sites that block default clients |
 
