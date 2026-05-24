@@ -5,6 +5,9 @@
 [![n8n community node](https://img.shields.io/badge/n8n-community%20node-FF6D5A)](https://docs.n8n.io/integrations/community-nodes/)
 [![AI Agent Tool](https://img.shields.io/badge/AI%20Agent-tool%20ready-8A2BE2)](https://docs.n8n.io/advanced-ai/examples/understand-tools/)
 [![License: MIT](https://img.shields.io/npm/l/n8n-nodes-url-to-md.svg)](LICENSE.md)
+[![ephemeris momentum](https://ephemeris.tools/badge/sfrangulov/n8n-nodes-url-to-md/momentum.svg?theme=auto)](https://ephemeris.tools/u/sfrangulov)
+[![ephemeris sparkline](https://ephemeris.tools/badge/sfrangulov/n8n-nodes-url-to-md/sparkline.svg?theme=auto)](https://ephemeris.tools/u/sfrangulov)
+[![ephemeris stars](https://ephemeris.tools/badge/sfrangulov/n8n-nodes-url-to-md/stars.svg?theme=auto)](https://ephemeris.tools/u/sfrangulov)
 
 An [n8n](https://n8n.io) community node that fetches a URL and converts the page into clean Markdown — ready for LLMs, RAG pipelines, and AI agents.
 
